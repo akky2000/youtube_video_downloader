@@ -1,11 +1,12 @@
 import yt_dlp
 
+#u can easily download the video with the help of this python code
 
 def download_youtube_video(video_url):
     """Downloads a YouTube video using yt-dlp."""
 
     ydl_opts = {
-        "outtmpl": "%(title)s.%(ext)s",  # Output filename template
+        "outtmpl": "%(title)s.%(ext)s", 
     }
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
         info_dict = ydl.extract_info(video_url, download=False)
